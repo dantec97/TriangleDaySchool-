@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tobey's Story | Triangle Day School</title>
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="tobeyStory.css" />
+</head>
+<body>
+
+  <!-- ========== SITE HEADER (reused from index) ========== -->
+  <header id="tds-header-container" class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" aria-label="Triangle Day School Home">
+          <img
+            src="https://triangledayschool.org/wp-content/uploads/2023/09/TDS-Logo-LightBG-1.svg"
+            alt="Triangle Day School Logo"
+            class="logo-standard"
+          />
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main Menu">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <a href="#">About</a>
+            <ul class="dropdown">
+              <li><a href="https://triangledayschool.org/about/">Welcome from the Head</a></li>
+              <li><a href="https://triangledayschool.org/about/mission-and-history/">Mission &amp; History</a></li>
+              <li><a href="https://triangledayschool.org/about/faculty-and-staff/">Faculty &amp; Staff</a></li>
+              <li><a href="https://triangledayschool.org/about/contact-us/">Contacts &amp; Hours</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Enrollment</a>
+            <ul class="dropdown">
+              <li><a href="https://triangledayschool.org/admissions/">Start Your Journey</a></li>
+              <li><a href="https://triangledayschool.org/admissions/admissions-process/">Steps to Apply</a></li>
+              <li><a href="https://triangledayschool.org/admissions/affording-tds/">Affording TDS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Classroom</a>
+            <ul class="dropdown">
+              <li><a href="https://triangledayschool.org/academics/">Academics</a></li>
+              <li><a href="https://triangledayschool.org/academics/lower-school/">Lower School</a></li>
+              <li><a href="https://triangledayschool.org/academics/middle-school/">Middle School</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Community</a>
+            <ul class="dropdown">
+              <li><a href="https://triangledayschool.org/community/">The TDS Family</a></li>
+              <li><a href="https://triangledayschool.org/community/athletics/">Athletics</a></li>
+              <li><a href="https://triangledayschool.org/community/alumni/">Alumni</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Support</a>
+            <ul class="dropdown">
+              <li><a href="https://triangledayschool.org/support/">Give Now</a></li>
+              <li><a href="https://triangledayschool.org/support/annual-fund/">Annual Fund</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="quicklinks-nav" aria-label="Quicklinks">
+        <ul class="quicklinks-list">
+          <li><a href="https://triangledayschool.org/about/calendar/">Calendar</a></li>
+          <li><a href="https://www.parentsquare.com/schools/14719/feeds" target="_blank" rel="noopener">ParentSquare</a></li>
+          <li><a href="https://tds-nc.client.factsmgt.com/pwr/" target="_blank" rel="noopener">FACTS</a></li>
+          <li><a href="https://triangledayschool.org/for-parents/">Family Portal</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+        &#9776;
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Menu" hidden>
+      <ul class="mobile-nav-list">
+        <li><a href="https://triangledayschool.org/for-parents/">Family Portal</a></li>
+        <li class="mobile-has-dropdown">
+          <button class="mobile-dropdown-toggle" aria-expanded="false">About</button>
+          <ul class="mobile-dropdown" hidden>
+            <li><a href="https://triangledayschool.org/about/">Welcome from the Head</a></li>
+            <li><a href="https://triangledayschool.org/about/mission-and-history/">Mission &amp; History</a></li>
+          </ul>
+        </li>
+        <li class="mobile-has-dropdown">
+          <button class="mobile-dropdown-toggle" aria-expanded="false">Enrollment</button>
+          <ul class="mobile-dropdown" hidden>
+            <li><a href="https://triangledayschool.org/admissions/">Start Your Journey</a></li>
+            <li><a href="https://triangledayschool.org/admissions/admissions-process/">Steps to Apply</a></li>
+          </ul>
+        </li>
+        <li class="mobile-has-dropdown">
+          <button class="mobile-dropdown-toggle" aria-expanded="false">Classroom</button>
+          <ul class="mobile-dropdown" hidden>
+            <li><a href="https://triangledayschool.org/academics/">Academics</a></li>
+            <li><a href="https://triangledayschool.org/academics/lower-school/">Lower School</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="story-hero" aria-label="Tobey's story hero">
+      <div class="story-hero-overlay"></div>
+      <div class="story-hero-content">
+        <span class="story-eyebrow">Stories from Our Community</span>
+        <h1 class="story-hero-name">Meet Tobey</h1>
+        <p class="story-hero-grade">Grade 4 &nbsp;·&nbsp; Triangle Day School</p>
+        <div class="story-hero-divider" aria-hidden="true"></div>
+        <h2 class="story-hero-question">What makes Triangle Day School feel like home?</h2>
+        <blockquote class="story-hero-quote">
+          All the teachers know my name. Even the older kids say hi to me in the hallway.
+        </blockquote>
+      </div>
+      <div class="story-hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ========== INTRO ========== -->
+    <section class="story-intro reveal">
+      <div class="container story-intro-inner">
+        <p class="story-intro-text">
+          When Tobey first came to TDS, he was nervous about being the new kid.
+          It didn't take long before classmates invited him into games at recess,
+          teachers remembered the little things that made him unique, and the school
+          started to feel like a second home.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== QUICK FACTS ========== -->
+    <section class="story-facts reveal" aria-label="Quick facts about Tobey">
+      <div class="container">
+        <h2 class="story-section-title">Quick Facts</h2>
+        <div class="facts-grid">
+          <div class="fact-card">
+            <span class="fact-icon" aria-hidden="true">❤️</span>
+            <span class="fact-label">Favorite Subject</span>
+            <span class="fact-value">Science</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-icon" aria-hidden="true">📚</span>
+            <span class="fact-label">Favorite Book</span>
+            <span class="fact-value"><em>The Wild Robot</em></span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-icon" aria-hidden="true">🎨</span>
+            <span class="fact-label">Favorite Activity</span>
+            <span class="fact-value">Building LEGO Creations</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-icon" aria-hidden="true">🍕</span>
+            <span class="fact-label">Favorite Lunch</span>
+            <span class="fact-value">Pizza Friday</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DAY IN THE LIFE ========== -->
+    <section class="story-timeline reveal" aria-label="A day at TDS">
+      <div class="container">
+        <h2 class="story-section-title">A Day at TDS</h2>
+        <ol class="timeline" aria-label="Tobey's school day">
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">☀️</div>
+            <div class="timeline-body">
+              <strong>Morning Meeting</strong>
+              <p>The day starts with community. Everyone shares, everyone listens.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">📐</div>
+            <div class="timeline-body">
+              <strong>Math</strong>
+              <p>Problem-solving that actually makes you think.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">🔬</div>
+            <div class="timeline-body">
+              <strong>Science</strong>
+              <p>Tobey's favorite — experiments, questions, and discovery.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">🍎</div>
+            <div class="timeline-body">
+              <strong>Lunch</strong>
+              <p>Especially when it's Pizza Friday.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">⚽</div>
+            <div class="timeline-body">
+              <strong>Recess</strong>
+              <p>The place where new friendships get started.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">🎨</div>
+            <div class="timeline-body">
+              <strong>Art</strong>
+              <p>Creative expression — no wrong answers here.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">🎵</div>
+            <div class="timeline-body">
+              <strong>Music</strong>
+              <p>The perfect way to finish the day.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== FAVORITE MOMENT ========== -->
+    <section class="story-moment reveal" aria-label="Tobey's favorite moment">
+      <div class="container">
+        <h2 class="story-section-title story-section-title--light">My Favorite Moment</h2>
+        <figure class="moment-quote-wrap">
+          <blockquote class="moment-quote">
+            "We were building bridges in science class, and mine kept collapsing. I thought I
+            was doing everything wrong. Instead of laughing, my friends came over and started
+            helping me figure it out. When it finally held up, everyone cheered. That's when I
+            realized everyone here wants each other to succeed."
+          </blockquote>
+          <figcaption class="moment-caption">— Tobey, Grade 4</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== LIGHTNING ROUND ========== -->
+    <section class="story-lightning reveal" aria-label="Lightning round with Tobey">
+      <div class="container">
+        <h2 class="story-section-title">⚡ Lightning Round</h2>
+        <div class="lightning-grid">
+          <div class="lightning-card">
+            <span class="lightning-q">Dream job?</span>
+            <span class="lightning-a">Wildlife Photographer 📸</span>
+          </div>
+          <div class="lightning-card">
+            <span class="lightning-q">Favorite superhero?</span>
+            <span class="lightning-a">Spider-Man 🕷️</span>
+          </div>
+          <div class="lightning-card">
+            <span class="lightning-q">Cats or dogs?</span>
+            <span class="lightning-a">Dogs... but don't tell my friend's cat. 🐶</span>
+          </div>
+          <div class="lightning-card">
+            <span class="lightning-q">Favorite dinosaur?</span>
+            <span class="lightning-a">Ankylosaurus. It's basically a walking tank. 🦕</span>
+          </div>
+          <div class="lightning-card">
+            <span class="lightning-q">Hidden talent?</span>
+            <span class="lightning-a">I can juggle three tennis balls. 🎾</span>
+          </div>
+          <div class="lightning-card">
+            <span class="lightning-q">What are you proud of this year?</span>
+            <span class="lightning-a">Giving a presentation in front of the whole class even though I was nervous. 🎤</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CLOSING QUOTE ========== -->
+    <section class="story-closing reveal" aria-label="Tobey's advice">
+      <div class="container">
+        <h2 class="story-closing-question">
+          If someone was thinking about coming to TDS, what would you tell them?
+        </h2>
+        <blockquote class="story-closing-quote">
+          "Don't worry if you're nervous. Before you know it, your teachers will know your name,
+          and you'll have friends to sit with at lunch. That's what happened to me."
+        </blockquote>
+        <p class="story-closing-sig">— Tobey</p>
+
+        <div class="story-closing-cta">
+          <p>Your child could have a story just like Tobey's.</p>
+          <a class="btn btn-primary" href="https://tds-nc.client.renweb.com/oa/inquiry.cfm?memberid=15577"
+             target="_blank" rel="noopener">Start Your Journey</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" id="tds-footer">
+    <div class="container footer-inner">
+      <div class="footer-main">
+        <h2 class="footer-tagline">A co-ed, independent school serving grades TK–8</h2>
+        <p class="footer-description">
+          As a warm and welcoming community devoted to academic excellence, Triangle Day School
+          ignites intellectual curiosity, fosters compassion and integrity, and nurtures
+          creativity, inspiring confidence in each student to lead a life of purpose.
+        </p>
+        <div class="footer-cta-buttons">
+          <a class="btn btn-white" href="https://triangledayschool.kindful.com/" target="_blank" rel="noopener">Donate Now</a>
+          <a class="btn btn-white" href="https://tds-nc.client.renweb.com/oa/?memberid=15577" target="_blank" rel="noopener">Apply Today</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/triangledayschool/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/triangledayschool/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          <a href="https://www.linkedin.com/school/triangledayschool/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <img
+          src="https://triangledayschool.org/wp-content/uploads/2023/09/TDS-Logo-DarkBG.svg"
+          alt="Triangle Day School"
+          class="footer-logo"
+        />
+        <address>
+          <a href="https://goo.gl/maps/Geh7jmyxov21vsZs5" target="_blank" rel="noopener">
+            4911 Neal Road<br />Durham, NC 27705
+          </a><br /><br />
+          <a href="tel:+19193838800">(919) 383-8800</a><br />
+          Fax: (919) 383-7157<br />
+          <a href="mailto:info@triangledayschool.org">info@triangledayschool.org</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          Copyright &copy; 2026 Triangle Day School &nbsp;|&nbsp;
+          <a href="https://triangledayschool.org/privacy/">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="https://triangledayschool.org/nondiscrimination-policy/">Nondiscrimination Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="tobeyStory.js"></script>
+</body>
+</html>
