@@ -1,0 +1,622 @@
+/* =============================================
+   CSS VARIABLES — TDS Brand Colors & Fonts
+   ============================================= */
+:root {
+  --color-purple:    #4f2683;
+  --color-yellow:    #ffd200;
+  --color-amber:     #e9a825;
+  --color-white:     #ffffff;
+  --color-light-bg:  #f6f6f6;
+  --color-dark-text: #333333;
+
+  --font-heading: 'Roboto Slab', Georgia, serif;
+  --font-body:    'Open Sans', Arial, sans-serif;
+
+  --max-width: 1200px;
+  --transition: 0.3s ease;
+}
+
+/* =============================================
+   RESET / BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-dark-text);
+  background-color: var(--color-white);
+}
+
+a {
+  color: var(--color-purple);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover { color: var(--color-yellow); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+address { font-style: normal; }
+
+/* =============================================
+   UTILITY
+   ============================================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 1em 0 1em 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-yellow);
+  color: var(--color-purple);
+  border: 2px solid var(--color-yellow);
+}
+.btn-primary:hover {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border-color: var(--color-purple);
+}
+
+.btn-secondary {
+  background-color: var(--color-yellow);
+  color: var(--color-purple);
+  border: 2px solid var(--color-yellow);
+  border-radius: 0 0 0 1em;
+}
+.btn-secondary:hover {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border-color: var(--color-purple);
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  border: 2px solid var(--color-white);
+}
+.btn-white:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-purple);
+  border-color: var(--color-yellow);
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+  background-color: var(--color-white);
+  box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.header-logo a { display: inline-block; }
+.header-logo img { max-width: 200px; }
+
+/* Desktop Nav */
+.main-nav { display: flex; }
+.nav-list {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+}
+
+.nav-item > a {
+  display: block;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: var(--color-purple);
+  border-radius: 1em 0 1em 0;
+  transition: background-color var(--transition), color var(--transition);
+}
+.nav-item > a:hover,
+.nav-item:focus-within > a {
+  background-color: var(--color-purple);
+  color: var(--color-yellow);
+}
+
+/* Dropdown */
+.nav-item { position: relative; }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: var(--color-purple);
+  border-radius: 0 1em 1em 1em;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+  list-style: none;
+  z-index: 100;
+}
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 8px 18px;
+  color: var(--color-white);
+  font-size: 13px;
+  transition: background-color var(--transition);
+}
+.dropdown li a:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: var(--color-yellow);
+}
+.dropdown li:last-child a {
+  border-radius: 0 0 1em 1em;
+}
+
+/* Quicklinks */
+.quicklinks-nav { display: flex; align-items: center; }
+.quicklinks-list {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+}
+.quicklinks-list a {
+  padding: 6px 14px;
+  background-color: var(--color-yellow);
+  color: var(--color-purple);
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 1em 0 1em 0;
+  transition: background-color var(--transition), color var(--transition);
+}
+.quicklinks-list a:hover {
+  background-color: var(--color-purple);
+  color: var(--color-yellow);
+}
+
+/* Mobile toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: var(--color-purple);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav {
+  background-color: var(--color-purple);
+  padding: 10px 0 20px;
+}
+.mobile-nav-list { list-style: none; }
+.mobile-nav-list > li {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.mobile-nav-list > li > a,
+.mobile-dropdown-toggle {
+  display: block;
+  padding: 14px 20px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.mobile-nav-list > li > a:hover,
+.mobile-dropdown-toggle:hover {
+  color: var(--color-yellow);
+}
+.mobile-dropdown { list-style: none; background: rgba(0,0,0,0.2); }
+.mobile-dropdown a {
+  display: block;
+  padding: 10px 20px 10px 40px;
+  color: var(--color-white);
+  font-size: 14px;
+}
+.mobile-dropdown a:hover { color: var(--color-yellow); }
+
+/* =============================================
+   HERO SLIDER
+   ============================================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.hero-slide.active { opacity: 1; }
+
+.hero-slide-content {
+  max-width: 700px;
+}
+.hero-slide-content.align-right { margin-left: auto; text-align: right; }
+.hero-slide-content.align-center { margin: 0 auto; text-align: center; }
+
+.hero-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  text-shadow: 3px 2px 6px rgba(0,0,0,0.5);
+  line-height: 1.15;
+}
+
+/* Slider Dots */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.hero-dot.active,
+.hero-dot:hover {
+  background-color: var(--color-yellow);
+  transform: scale(1.2);
+}
+
+/* =============================================
+   MISSION SECTION
+   ============================================= */
+.mission-section {
+  padding: 40px 0;
+  background-color: var(--color-white);
+}
+
+.mission-text {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+  text-align: center;
+  color: var(--color-dark-text);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-text strong { font-size: 1.15em; }
+
+/* =============================================
+   CTA SECTION — Parallax + Triangle Separators
+   ============================================= */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 0;           /* triangles handle spacing */
+}
+
+/* Parallax background */
+.cta-parallax-bg {
+  position: absolute;
+  inset: -30%;          /* oversized so parallax has room to move */
+  background-image: url('https://triangledayschool.org/wp-content/uploads/2023/03/2022TDSSchoolPhoto-02-Web.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Triangle separators */
+.cta-triangle {
+  position: relative;
+  z-index: 2;
+  line-height: 0;
+}
+
+.cta-triangle svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* Cards wrapper — sits above parallax bg */
+.cta-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 10px 30px 20px;
+}
+
+.cta-card {
+  background-color: rgba(246, 246, 246, 0.88);
+  padding: 25px 20px;
+  border-radius: 0.5em;
+  text-align: center;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cta-icon { font-size: 2.5rem; }
+
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-purple);
+}
+
+/* =============================================
+   NEWS SECTION
+   ============================================= */
+.news-section {
+  padding: 50px 0 60px;
+  background-color: var(--color-white);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-purple);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--color-yellow);
+  display: inline-block;
+}
+
+.news-section .container { text-align: center; }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.news-card {
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.news-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+.news-card:hover .news-card-bg { transform: scale(1.05); }
+
+.news-card-body {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(51,51,51,0.9) 60%, transparent);
+}
+
+.news-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+.news-card-title a {
+  color: var(--color-white);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.news-card-title a:hover { color: var(--color-yellow); }
+
+.news-card-byline {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-yellow);
+  margin-bottom: 8px;
+}
+
+.news-card-excerpt {
+  font-size: 13px;
+  color: var(--color-white);
+  margin-bottom: 14px;
+  display: none; /* shown on hover via JS */
+}
+.news-card:hover .news-card-excerpt { display: block; }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: 40px 0 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-white);
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+
+.footer-cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+.footer-social a {
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+}
+.footer-social a:hover { color: var(--color-yellow); }
+
+.footer-contact { text-align: right; }
+
+.footer-logo {
+  max-width: 200px;
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+
+.footer-contact address a {
+  color: var(--color-white);
+  line-height: 1.8;
+}
+.footer-contact address a:hover { color: var(--color-yellow); }
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.footer-bottom p {
+  font-size: 12px;
+  color: var(--color-white);
+  text-align: center;
+}
+.footer-bottom a {
+  color: var(--color-white);
+}
+.footer-bottom a:hover { color: var(--color-yellow); }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1000px) {
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+  .header-logo img { max-width: 150px; }
+}
+
+@media (max-width: 850px) {
+  /* Header */
+  .main-nav,
+  .quicklinks-nav { display: none; }
+
+  .mobile-menu-toggle { display: block; }
+
+  .header-inner {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  /* Hero */
+  .hero-heading { font-size: clamp(2rem, 8vw, 3.5rem); }
+
+  /* CTA */
+  .cta-section { background-attachment: scroll; }
+  .cta-grid { flex-direction: column; align-items: center; }
+  .cta-card { max-width: 300px; width: 100%; }
+
+  /* News */
+  .news-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; }
+  .footer-contact { text-align: left; }
+  .footer-logo { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .mission-section { padding: 25px 0; }
+  .container { padding: 0 16px; }
+}
